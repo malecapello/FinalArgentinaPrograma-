@@ -5,19 +5,50 @@
 }
 
 .card {
-    margin: 10px;
+    margin: 20px 10px;
+    display: flex;
+    align-items: center;
 }
 .card-img-top {
     height: 18rem;
+    width: 14rem;
 }
 
 .card-body {
     display: flex;
     flex-direction: column;
     align-items: center;
-}
+    justify-content: flex-end;
+    }
 
 .btn {
-    text-align: center;
     width: 8rem;
+}
+
+
+.subt {
+    text-align: center;
+    margin: 20px;
+}
+
+.form-dcto {
+    margin: 50px 20px;
+    border: solid 1px black;
+    padding: 50px 5px 30px 10px;
+    background-color: yellow;
+}
+
+.form-container {
+    display: flex;
+    justify-content: space-around;
+}
+
+.sform {
+    margin: 0 10px 10px 30px;
+    text-align: center;
+}
+
+.btn-enviar {
+    color: white;
+    background-color: green;
 }
