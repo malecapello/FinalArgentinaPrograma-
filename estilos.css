@@ -1,0 +1,23 @@
+.conteiner {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.card {
+    margin: 10px;
+}
+.card-img-top {
+    height: 18rem;
+}
+
+.card-body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.btn {
+    text-align: center;
+    width: 8rem;
+}
