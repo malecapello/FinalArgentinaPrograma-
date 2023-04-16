@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 .header {
 background: rgb(180,115,58);
 background: linear-gradient(90deg, rgba(180,115,58,1) 0%, rgba(253,138,29,1) 50%, rgba(252,69,69,1) 100%);
@@ -21,3 +22,158 @@ border-radius: 50px;
 margin: 7px;
 
 }
+=======
+.conteiner {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.card {
+    margin: 20px 10px;
+    display: flex;
+    align-items: center;
+}
+.card-img-top {
+    height: 18rem;
+    width: 14rem;
+}
+
+.card-body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    }
+
+.btn {
+    width: 8rem;
+}
+
+
+.subt {
+    text-align: center;
+    margin: 20px;
+}
+
+.form-dcto {
+    margin: 50px 20px;
+    border: solid 1px black;
+    padding: 50px 5px 30px 10px;
+    background-color: yellow;
+}
+
+.form-container {
+    display: flex;
+    justify-content: space-around;
+}
+
+.sform {
+    margin: 0 10px 10px 30px;
+    text-align: center;
+}
+
+.btn-enviar {
+    color: white;
+    background-color: green;
+}
+
+
+/* Footer */
+#piedepagina {
+    width: 100%;
+    margin: 0;
+    background-color: #fff4ea;
+    background-size: cover;
+}
+#Columna1, #Columna2 {
+    display: grid;
+    padding: 40px;
+    margin: 10px;
+    width: 30;
+    text-decoration: none;
+    color: black;
+}
+
+#Columna3 {
+    padding: 40px;
+    margin: 10px;
+    text-decoration: none;
+    text-align: center;
+    width: 30;
+}
+
+.column a {
+    text-decoration: none;
+    color:black;
+    
+}
+.column a:hover{
+    text-decoration: none;
+    color: orange;
+    font-weight: 500;
+    transition: all;
+
+}
+
+button {
+    background-color: #ffffff;
+    border: none;
+    margin-left: 3px;
+    margin-bottom: 5px;
+    padding: 1rem;
+    font-size: 1rem;
+    text-align: center;
+    width: 80px;
+    height: 65px;
+    border-radius: 1rem;
+    color: orange;
+    box-shadow: 0 0.2rem #f6dca4;
+    cursor: pointer;
+   }
+   
+button:active {
+    color: white;
+    box-shadow: 0 0.1rem #dfd9d9;
+    transform: translateY(0.2rem);
+    }
+   
+button:hover {
+    background: orange;
+    color: white;
+    text-shadow: 0 0.1rem #bcb4b4;
+    }
+   
+
+
+#bloqueSuperior {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: auto;
+}
+
+#barraInferior{
+    max-width: 1200px;
+    margin: auto;
+    text-align: center;
+    height: 3rem;
+    position: relative;
+}
+
+#barraInferior hr{
+    border: none;
+    height: 1.5px;
+    background-color: orange;
+    margin-bottom: 0.5rem;
+}
+
+#barraInferior p{
+    margin-top: 0%;
+    margin: 0%;
+    padding: 0%;
+    color: orange;
+}
+
+>>>>>>> 269039781365084908c7249821e1d6a32385cb57
