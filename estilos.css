@@ -1,0 +1,23 @@
+.header {
+background: rgb(180,115,58);
+background: linear-gradient(90deg, rgba(180,115,58,1) 0%, rgba(253,138,29,1) 50%, rgba(252,69,69,1) 100%);
+}
+
+.collapse {
+display: flex;
+flex-direction: row;
+justify-content: flex-end;
+}
+
+.nav {
+text-decoration: none;
+margin: 10px;
+font-size: 20px;
+color: black;
+}
+
+.Logo {
+border-radius: 50px;
+margin: 7px;
+
+}
