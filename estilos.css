@@ -64,8 +64,10 @@ margin: 7px;
 
 
 .subt {
+    font-size: 27px;
     text-align: center;
     margin: 20px;
+    
 }
 
 .form-dcto {
@@ -109,18 +111,21 @@ margin: 7px;
 .container-cards {
     display: flex;
     flex-wrap: wrap;
+    flex-direction: row;
     width: 100%;
-    min-height: 400px;
-    align-items: center;
-    justify-content: space-around;
-    
+    min-height: 430px;
+    padding: 0;
+    padding-top: 30px;
+    margin: 0;
+    align-content: flex-start;
 }
 
 .card2 {
     margin: 40px 30px;
+    padding: 0;
     align-content: center;
     position: relative;
-    width: 350px;
+    width: 270px;
     height: 190px;
     background-color: #ffffff;
     border-radius: 20px;
@@ -143,7 +148,7 @@ margin: 7px;
 }
 
 .card2 .content .details{
-    padding: 20px;
+    padding: 5px;
     width: 100%;
     transition: 0.5s;
     transform: translateY(150px);
@@ -239,7 +244,7 @@ margin: 7px;
     padding: 40px;
     margin: 10px;
     width: 30;
-    font-size: medium;
+    font-size: 15px;
     text-decoration: none;
     color: black;
 }
@@ -306,7 +311,6 @@ button:hover {
 #barraInferior{
     max-width: 1200px;
     margin: auto;
-    font-size: small;
     text-align: center;
     height: 3rem;
     position: relative;
