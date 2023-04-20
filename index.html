@@ -41,13 +41,65 @@
                             <a class="nav-link" href="./formulario.html">Contactanos</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="./reclamos.html">Reclamos</a>
+                            <a class="nav-link" href="./regReclamo.html">Reclamos</a>
                         </li>
             </nav>
         </nav>
     </header>
     <main>
-
+        <div id="carouselExampleControls" class="carousel slide carousel-fade" data-ride="carousel">
+            <div class="carousel-inner" role="listbox">
+              <div class="carousel-item active">
+                <div class="imgg"><img class="d-block img-fluid" src="./Imagenes/Slide1.jpg" alt="First slide"></div>
+                <div class="carousel-caption d-none d-md-block">
+                    <h5 id="bienv">¡Bienvenido!</h5>
+                    <p id="emprendimiento">Somos un emprendimiento de jóvenes amantes de los libros, y buscamos transmitir esa pasión a la mayor cantidad de personas posibles. <br> ¡Es por ello que creamos
+                        esta web! La lectura es una actividad esencial para nuestro desarrollo personal y profesional. A través de ella podemos adquirir nuevos conocimientos,
+                        estimular nuestra imaginación y creatividad, mejorar nuestra capacidad de comunicación y expresión, y mejorar nuestra salud mental y bienestar.</p>
+                    <p id="invit">Te invitamos a conocer las secciones <i class="bi bi-forward-fill"></i></p>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <div class="imgg"><img class="d-block img-fluid" src="./Imagenes/Slide2.jpg" alt="Second slide"></div>
+                <div class="carousel-caption d-none d-md-block">
+                    <a href="#" class="sections">Ficción y Literatura</a> 
+                </div>
+              </div>
+              <div class="carousel-item">
+                <div class="imgg"><img class="d-block img-fluid" src="./Imagenes/Slide3.jpg" alt="Third slide"></div>
+                <div class="carousel-caption d-none d-md-block">
+                    <a href="#" class="sections">Ciencia y Educación</a> 
+                </div>
+              </div>
+              <div class="carousel-item">
+                <div class="imgg"><img class="d-block img-fluid" src="./Imagenes/Slide4.jpg" alt="Four slide"></div>
+                <div class="carousel-caption d-none d-md-block">
+                    <a href="#" class="sections">Libros Infantiles</a> 
+                </div>
+              </div>
+              <div class="carousel-item">
+                <div class="imgg"><img class="d-block img-fluid" src="./Imagenes/Slide5.jpg" alt="Fifth slide"></div>
+                <div class="carousel-caption d-none d-md-block">
+                    <a href="#" class="sections">Salud y Bienestar</a> 
+                </div>
+              </div>
+              <div class="carousel-item">
+                <div class="imgg"><img class="d-block img-fluid" src="./Imagenes/Slide6.jpg" alt="Sixth slide"></div>
+                <div class="carousel-caption d-none d-md-block">
+                    <a href="#" class="sections">Revistas y Cómics</a> 
+                </div>
+              </div>
+            </div>
+            <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="sr-only">Next</span>
+            </a>
+          </div>
+        
         <!-- CARDS -->
 
         <h2 class="subt">Los más vendidos este mes</h2>
@@ -197,6 +249,7 @@
                         },
 
                         success: function (respuestas) {
+                            alert 
                             console.log(respuestas);
                             $("#respuestas").html("#nombre " + respuestas.nombre + "<br>email: " + respuestas.email);
 
@@ -222,60 +275,66 @@
             <div class="container-cards">
                 <div class="card2" id="pres1">
                     <div class="imgCard">
-                        <img src="#" alt="Foto1">
+                        <img src="./Imagenes/Fotog1.png" alt="Foto1">
                     </div>
                     <div class="content">
                         <div class="details">
-                            <h2>Nombre y apellido<br><span>Descripción</span></h2>
+                            <h2>Abril Carolina Herrera<br><span>Estudiante de Desarrollo Web y Java</span></h2>
                             <div class="data">
-                                <p>Descripción ampliada</p>
+                                <p>A pesar del poco tiempo que tengo cursando siento que he adquirido muchos conocimientos, me he familiarizado con diferentes
+                                    tecnologías y me ha encantado la experiencia. Espero en un futuro cercano cumplir los objetivos propuestos y poder
+                                    desarrollarme como profesional en este medio.
+                                </p>
+                                <a href="https://linktr.ee/abrilcaro" target="_blank">VER MÁS <i class="bi bi-arrow-right-square" style="text-decoration: none; color: orange; font-size: 15px; margin-left: 3px;"></i></a>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="card2" id="pres2">
-                    <div class="imgCard">
-                        <img src="#" alt="Foto2">
+                    <div class="imgCard"> 
+                        <img src="./Imagenes/Fotog2.jpeg" alt="Foto2">
                     </div>
                     <div class="content">
                         <div class="details">
-                            <h2>Nombre y Apellido<br><span>Descripción</span></h2>
+                            <h2> Franco Maldonado<br><span>Técnico en la Industrialización <br> de la madera y el mueble</span></h2>
                             <div class="data">
-                                <p>Descripción ampliada</p>
+                            <p>Amplia experiencia en el rubro de equipamiento de interiorismo mobiliario, desarrollando mejoras continuas dentro de los procesos
+                                de producción en las industrias del rubro. Aprendiendo desarrollo web para iniciar con software de soporte a las áreas técnicas.
+                            </p>
+                            <a href="https://instagram.com/francomaldonado96" target="_blank">VER MÁS <i class="bi bi-arrow-right-square" style="text-decoration: none; color: orange; font-size: 15px; margin-left: 3px;"></i></a>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="card2" id="pres3">
-                    <div class="imgCard">
+                    <div class="imgCard"> 
                         <img src="./Imagenes/Fotog3.jpeg" alt="Foto3">
                     </div>
                     <div class="content">
                         <div class="details">
-                            <h2>Georgina Lambert<br><span>Estudiante de Comunicación</span></h2>
+                            <h2>Georgina Lambert<br><span>Estudiante de Comunicación <br>y Desarrollo Web</span></h2>
                             <div class="data">
-                                <p>Experiencia en áreas de diseño gráfico y fotografía, con formación en la Universidad
-                                    Nacional de Entre Ríos.
-                                    Actualmente, aprendiendo Desarrollo Web Inicial en la Universidad Tecnológica
-                                    Nacional.
-                                </p>
-                                <a href="https://linktr.ee/georginalambertgarcia" target="_blank">VER MÁS <i
-                                        class="bi bi-arrow-right-square"
-                                        style="text-decoration: none; color: orange; font-size: 15px; margin-left: 3px;"></i></a>
+                            <p>Eterna estudiante y aprendiz. Tengo experiencia en áreas del diseño gráfico, imagen y video. Actualmente estoy aprendiendo Desarrollo Web Inicial
+                                para poder sumar conocimientos, combinarlos y poder desenvolverme en esta rama.
+                            
+                            </p>
+                            <a href="https://linktr.ee/georginalambertgarcia" target="_blank">VER MÁS <i class="bi bi-arrow-right-square" style="text-decoration: none; color: orange; font-size: 15px; margin-left: 3px;"></i></a>
                             </div>
-
                         </div>
                     </div>
                 </div>
                 <div class="card2" id="pres4">
                     <div class="imgCard">
-                        <img src="#" alt="Foto4">
+                        <img src="./Imagenes/Fotog4.jpeg" alt="Foto4">
                     </div>
                     <div class="content">
                         <div class="details">
-                            <h2>Nombre y Apellido<br><span>Descripción</span></h2>
+                            <h2>Malena Capello<br><span>Estudiante de Desarrollo Web</span></h2>
                             <div class="data">
-                                <p>Descripción ampliada</p>
+                                <p>Me apasiona la tecnología. Busco seguir aprendiendo, formándome en esta área. Comparto uno de mis primeros proyectos que realicé,
+                                    y apuesto a seguir creciendo en este mercado y recorriendo lo más que se pueda.
+                                </p>
+                                <a href="https://malecapello.github.io/Repositorio-nuevo/" target="_blank">VER MÁS <i class="bi bi-arrow-right-square" style="text-decoration: none; color: orange; font-size: 15px; margin-left: 3px;"></i></a>
                             </div>
                         </div>
                     </div>
@@ -292,8 +351,8 @@
                     <h4 style="font-size: 21px; font-weight: 550;">SECCIONES</h4>
                 </div>
                 <a href="#">Ficción y Literatura</a>
-                <a href="#">Libros Infantiles</a>
                 <a href="#">Ciencia y Educación</a>
+                <a href="#">Libros Infantiles</a>
                 <a href="#">Salud y Bienestar</a>
                 <a href="#">Revistas y Cómics</a>
             </div>

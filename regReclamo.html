@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="styles.css">
+    <title>FORMULARIO DE RECLAMO</title>
+    <script type="text/javascript" src="jspdf.min.js"></script>
+    
+</head>
+
+<body>
+    <div class = 'container'>
+        <header>SOLICITUD DE RECLAMO</header>
+
+        <div class="barraProgreso">
+            <div class="paso">
+                <p>Datos Personales</p>
+                <div class="numPaso">
+                    <span>◉</span>
+                </div>
+                <div class="check">✔</div>
+            </div>
+            <div class="paso">
+                <p>Informacion de Contacto</p>
+                <div class="numPaso">
+                    <span>◉</span>
+                </div>
+                <div class="check">✔</div>
+            </div>
+            <div class="paso">
+                <p>Datos del Problema</p>
+                <div class="numPaso">
+                    <span>◉</span>
+                </div>
+                <div class="check">✔</div>
+            </div>
+        </div>
+
+        <div class="form-principal">
+            <form id="mi-form">
+                <div class="pagina movPag">
+                    <div class="titulo">Informacion Principal</div>
+                    <div class="campo">
+                        <div class="label">Nombre: <b class="error" id="error-nombre"></b></div>
+                        <input type="text" id="nombre" placeholder="Nombre">
+                    </div>
+                    <div class="campo">
+                        <div class="label">Apellido: <b class="error" id="error-apellido"></b></div>
+                        <input type="text" id="apellido" placeholder="Apellido">
+                    </div>
+                    <div class="campo">
+                        <div class="label">Direccion: <b class="error" id="error-direccion"></b></div>
+                        <input type="text" id="direccion" placeholder="Direccion">
+                    </div>
+                    <div class="campo sigPag">
+                        <button>Siguiente</button>
+                    </div>
+                </div>
+
+                <div class="pagina">
+                    <div class="titulo">Informacion Contacto</div>
+                    <div class="campo">
+                        <div class="label">Correo Electronico: <b class="error" id="error-correo"></b></div>
+                        <input type="text" id="correo" placeholder="Nombre">
+                    </div>
+                    <div class="campo">
+                        <div class="label">Confirmar Correo:<b class="error" id="error-correoConf"></b></div>
+                        <input type="text" id="correoConf" placeholder="Confirmar Correo Electronico">
+                    </div>
+                    <div class="campo">
+                        <div class="label">Telefono:<b class="error" id="error-telefono"></b></div>
+                        <input type="text" id="telefono" placeholder="Telefono" pattern="[0-9]{10}">
+                    </div>
+                    <div class="campo btns">
+                        <button class="volver-p1 volver">Atras</button>
+                        <button class="adelante-p3 adelante">Siguiente</button>
+                    </div>
+                </div>
+
+                <div class="pagina">
+                    <div class="titulo">Informacion de Reclamo</div>
+                    <div class="campo">
+                        <div class="label">Problema: <b class="error" id="error-problema"></b></div>
+                        <input type="text" id="problema" placeholder="Problema">
+                    </div>
+                    <div class="campo">
+                        <div class="label">Descripcion: <b class="error" id="error-descripcion"></b> </div>
+                        <textarea name="Descripcion" id="descripcion" cols="50" rows="30" placeholder="Descripcion detallada del problema"></textarea>          
+                    </div>
+                    <div class="campo btns">
+                        <button class="volver-p2 volver">Atras</button>
+                        <button class="fin" >Enviar</button>
+                    </div>
+                    <input  class="GEN" type="submit" value="GENERAR PDF">
+                </div>
+            </form>
+        </div>
+    </div>
+    <div id="respuesta"></div>
+    <script src="mov.js"></script>
+    <script>
+    $("#mi-form").submit(function(event){
+        event.preventDefault();
+        var nombre_u = document.getElementById("nombre").value;
+        var apellido_u = document.getElementById("apellido").value;
+        var direccion_u = $("#direccion").val();
+        var correo_u = $("#correo").val();
+        var telefono_u = $("#telefono").val();
+        var problema_u = $("#problema").val();
+        var descripcion_u = $("#descripcion").val();
+        $.ajax({
+            url: "https://reqres.in/api/users/2",
+            type: "POST",
+            data: {
+    
+                nombre: nombre_u,
+                apellido: apellido_u,
+                direccion: direccion_u,
+                correo: correo_u,
+                telefono: telefono_u,
+                problema: problema_u,
+                descripcion: descripcion_u
+            },
+            success: function(respuesta){
+                console.log(respuesta)
+                genPDF(respuesta)
+            }
+        })
+    }
+        )
+    </script>
+      <script type="text/javascript">
+       function genPDF(respuesta){
+
+        var nombre_p = respuesta.nombre;
+        var apellido_p = respuesta.apellido;
+        var direccion_p = respuesta.direccion;
+        var correo_p = respuesta.correo;
+        var telefono_p = respuesta.telefono;
+        var problema_p = respuesta.problema;
+        var descripcion_p = respuesta.descripcion;
+
+        var resumen = ("Informe del Reclamo"+"\nnombre: " + nombre_p +  "\npellido: "+apellido_p + "\ndireccion: " + direccion_p + "\ncorreo: " + correo_p + "\ntelefono: " +  telefono_p + "\nproblema: " + problema_p + "\ndescripcion: " + descripcion_p)
+        
+            var doc =new jsPDF();
+            doc.text(20,20,resumen)
+            doc.save("reclamo.pdf")
+        }
+    </script>
+</body>
+</html>

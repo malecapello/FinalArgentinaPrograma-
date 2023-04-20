@@ -1,4 +1,4 @@
-/*HEAD (Male)*/
+/*HEAD*/
 .header {
     background: rgb(180,115,58);
     background: linear-gradient(90deg, rgba(180,115,58,1) 0%, rgba(253,138,29,1) 50%, rgba(252,69,69,1) 100%);
@@ -24,7 +24,42 @@
     
     }
     
-    /*BODY (Abril)*/
+    /*BODY Carousel*/
+    #bienv {
+        color: #000000;
+        text-align: left;
+        text-decoration: overline;
+        text-decoration: underline 2px;
+        
+    }
+
+    #emprendimiento {
+        font-size: medium;
+        font-weight: 500;
+        text-align: justify;
+        margin-right: 5px;
+        color: #000000;
+    }
+
+    #invit {
+        text-align: right;
+        font-weight: 500;
+    }
+
+    .sections {
+        font-size: x-large;
+        font-weight: 500;
+        color: white;
+        background-color: rgba(0, 0, 0, 0.5);
+    }
+
+    .sections:hover{
+        text-decoration: none;
+        color: white;
+        font-weight: 700;
+    }
+
+    /*BODY Cards Libros*/
     .conteiner {
         display: flex;
         flex-wrap: wrap;
@@ -97,7 +132,7 @@
     }
     
     
-    /*BODY (QUIENES SOMOS, GEORGI)*/
+    /*BODY (QUIENES SOMOS)*/
     
     #quienessomos {
         height: 100%;
@@ -116,7 +151,7 @@
         flex-wrap: wrap;
         flex-direction: row;
         width: 100%;
-        min-height: 450px;
+        min-height: 480px;
         padding-left: 60px;
         padding-right: 60px;
         padding-top: 30px;
@@ -139,7 +174,7 @@
     }
     
     .card2:hover {
-        height: 340px;
+        height: 360px;
     }
     
     .card2 .content {
@@ -153,7 +188,7 @@
     }
     
     .card2 .content .details{
-        padding: 5px;
+        padding: 1px;
         width: 100%;
         transition: 0.5s;
         transform: translateY(150px);
@@ -161,7 +196,7 @@
     }
     
     .card2:hover .content .details{
-        transform: translateY(0px);
+        transform: translateY(-20px);
     }
     
     .card2 .content .details h2 {
@@ -180,6 +215,7 @@
         opacity: 0.5;
         align-items: end;
         text-align: center;
+        line-height: 1rem;
     }
     
     .card2 .content .details .data {
@@ -203,7 +239,32 @@
         font-weight: 700;
     }
     
+     /* Cambios en presentaciones*/
+     #pres2 h2, #pres1 h2{
+        transform: translateY(25px);
+    }
     
+    #pres2 .data{
+        transform: translateY(12px);
+    }
+
+    #pres2:hover, #pres1:hover {
+        height: 365px;
+    }
+
+    #pres2:hover .content .details {
+        transform: translateY(-25px);
+    }
+
+    #pres1 .data{
+        transform: translateY(25px);
+    }
+    
+    #pres4 h2 {
+        transform: translateY(-14px);
+    }
+    
+   
     .imgCard {
         position: absolute;
         left: 50%;
@@ -237,7 +298,7 @@
         }
     }
     
-    /* FOOTER (Georgi)*/
+    /* FOOTER*/
     #piedepagina {
         width: 100%;
         margin: 0;
@@ -340,32 +401,35 @@
 
 
     
-    /* formulario de contacto fran */
-
-
-
+    /* Formulario de contacto */
     .bodyform {
-        min-height: 100vh;
+        background: rgb(180,115,58);
+        background: linear-gradient(90deg, rgba(180,115,58,1) 0%, rgba(253,138,29,1) 50%, rgba(252,69,69,1) 100%);
+        }
+
+        
+    .bodyform #cuerpoForm{
         display: flex;
+        flex-direction: column;
         align-items: center;
         justify-content: center;
     }
-    
-    form{
+
+    form.forC{
         background-color: rgb(255, 246, 232);
         padding: 50px 55px;
         border-radius: 20px;
         text-align: center;
-        width: 340px;
+        width: 680px;
     }
-    
-    .input-group {
+
+    .forC #inputs{
         display: flex;
         flex-direction: column;
         text-align: left;
     }
-    
-    input,  textarea{
+
+    input.forC,  textarea.forC{
         padding: 17px 25px;
         border-radius: 15px;
         margin-bottom: 20px;
@@ -373,7 +437,7 @@
         color: midnightblue;
     }
     
-    #boton{
+    #boton.forC{
         cursor: pointer;
         color: black;
         font-size: 15px;

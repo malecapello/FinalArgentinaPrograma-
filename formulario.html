@@ -14,6 +14,11 @@
     <title>VirtualBooks</title>
     <link rel="stylesheet" href="./estilos.css">
     <link rel="icon" href="./Imagenes/images.png">
+    <style type="text/css">
+        body {
+            font-family: 'Roboto Serif', 'serif';
+        }
+    </style>
 </head>
 
 <body class="bodyform">
@@ -35,28 +40,28 @@
                             <a class="nav-link" href="./formulario.html">Contactanos</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="./reclamos.html">Reclamos</a>
+                            <a class="nav-link" href="./regReclamo.html">Reclamos</a>
                         </li>
             </nav>
         </nav>
     </header>
-    <main>
-        <form action="https://formsubmit.co/prueba921@yopmail.com" method="POST">
+    <main class="cuerpoForm" id="cuerpoForm">
+        <form action="https://formsubmit.co/prueba921@yopmail.com" method="POST" class="forC">
             <h2>Formulario de Contacto</h2>
-            <div class="input-group">
-                <label for="nombreC">NOMBRE COMPLETO:</label>
-                <input type="text" name="nombreC" id="nombreC" placeholder="Nombre Completo">
+            <div class="input-group" id="inputs">
+                <label for="nombreC" class="forC">NOMBRE COMPLETO:</label>
+                <input type="text" name="nombreC" id="nombreC" placeholder="Nombre Completo" class="forC">
 
-                <label for="correo">CORREO ELECTRONICO:</label>
-                <input type="email" name="correo" id="correo" placeholder="Correo Electronico">
+                <label for="correo" class="forC">CORREO ELECTRONICO:</label>
+                <input type="email" name="correo" id="correo" placeholder="Correo Electronico" class="forC">
 
-                <label for="mensaje">MENSAJE:</label>
-                <textarea name="mensaje" id="mensaje" cols="30" rows="10"></textarea>
+                <label for="mensaje" class="forC">MENSAJE:</label>
+                <textarea name="mensaje" id="mensaje" cols="30" rows="10" class="forC"></textarea>
 
 
-                <input type="submit" id="boton" value="Enviar">
-                <input type="hidden" name="_next" value="http://127.0.0.1:5500/">
-                <input type="hidden" name="_captcha" value="false">
+                <input type="submit" id="boton" value="Enviar" class="forC">
+                <input type="hidden" name="_next" value="http://127.0.0.1:5500/" class="forC">
+                <input type="hidden" name="_captcha" value="false" class="forC">
             </div>
         </form>
     </main>

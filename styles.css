@@ -1,0 +1,154 @@
+*{
+    margin: 0;
+    padding: 0;
+    outline: none;
+    font-family: serif;
+}
+
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: rgb(180,115,58);
+    background: linear-gradient(90deg, rgba(180,115,58,1) 0%, rgba(253,138,29,1) 50%, rgba(252,69,69,1) 100%);
+}
+
+.container{
+    width: 350px;
+    background: white;
+    border-radius: 7px;
+    text-align: center;
+    padding: 30px 35px 0px 35px;
+}
+
+.container header {
+    font-size: 28px;
+    font-weight: 600;
+    margin: 0 0 30px 0;
+}
+
+.container .form-principal{
+    width: 100%;
+    overflow: hidden;
+}
+
+.form-principal form{
+    display: flex;
+    width: 300%;
+}
+
+.form-principal form .pagina{
+    width: 37%;
+    transition: margin-left 0.3s ease-in-out;
+}
+
+.form-principal form .pagina .titulo{
+    text-align: left;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.form-principal form .pagina .campo{
+    height: 35px;
+    width: 350px;
+    margin: 40px 0;
+    display: flex;
+    position: relative;
+}
+
+.form-principal form .pagina .campo .label{
+    position: absolute;
+    top: -30px;
+    font-weight: 500;
+    font-size: 14px;
+    font-style: normal;
+    float: left;
+    text-align: left;
+    width: 100%;
+}
+
+.form-principal form .pagina .GEN{
+    margin-right: 35px;
+    width: 40%;
+    height: 20%;
+    margin-top: -30px;
+    border: none;
+    background-color: rgb(7, 9, 116);
+    border-radius: 7px;
+    color: white;
+    font-size: 18px;
+    font-weight: 500;
+    text-transform: uppercase;
+    cursor: pointer;  
+}
+
+
+
+.form-principal form .pagina .campo input{
+    width: 100%;
+    height: 100%;
+    border: 1px solid black;
+    border-radius: 5px;
+    padding-left: 5px;
+}
+
+.form-principal form .pagina .campo textarea{
+    resize: none;
+    width: 100%;
+    height: 100%;
+    border: 1px solid black;
+    border-radius: 5px;
+    padding-left: 5px;
+}
+
+.form-principal form .pagina .campo button{
+    width: 100%;
+    height: calc(100% + 5px);
+    margin-top: -20px;
+    border: none;
+    background-color: rgb(7, 9, 116);
+    border-radius: 7px;
+    color: white;
+    font-size: 18px;
+    font-weight: 500;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+.form-principal form .pagina .campo button:hover{
+    background: rgb(255, 102, 0);
+}
+
+.form form .pagina .btns button{
+    margin-top: -20px!important;
+}
+
+form .pagina .btns button.volver{
+    margin-right: 3px;
+    font-size: 17px;
+}
+
+
+form .pagina .btns button.adelante{
+    margin-left: 3px;
+    font-size: 17px;
+}
+
+.container .barraProgreso{
+    display: flex;
+    margin: 40px 0px;
+}
+
+.container .barraProgreso .paso{
+    text-align: center;
+}
+
+.barraProgreso .paso .check{
+    display: none;
+}
+
+.barraProgreso .paso .check.active{
+    display: block;
+    color: blue;
+}
