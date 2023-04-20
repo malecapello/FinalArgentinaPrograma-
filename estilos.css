@@ -336,3 +336,46 @@
         padding: 0%;
         color: orange;
     }
+
+
+
+    
+    /* formulario de contacto fran */
+
+
+
+    .bodyform {
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    form{
+        background-color: rgb(255, 246, 232);
+        padding: 50px 55px;
+        border-radius: 20px;
+        text-align: center;
+        width: 340px;
+    }
+    
+    .input-group {
+        display: flex;
+        flex-direction: column;
+        text-align: left;
+    }
+    
+    input,  textarea{
+        padding: 17px 25px;
+        border-radius: 15px;
+        margin-bottom: 20px;
+        background-color: aliceblue;
+        color: midnightblue;
+    }
+    
+    #boton{
+        cursor: pointer;
+        color: black;
+        font-size: 15px;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+    }

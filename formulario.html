@@ -16,7 +16,7 @@
     <link rel="icon" href="./Imagenes/images.png">
 </head>
 
-<body>
+<body class="bodyform">
     <header class="header">
         <nav>
             <nav class="navbar navbar-expand-lg navbar-light">
@@ -35,11 +35,31 @@
                             <a class="nav-link" href="./formulario.html">Contactanos</a>
                         </li>
                         <li class="nav-item">
-                           <a class="nav-link" href="./reclamos.html">Reclamos</a>
+                            <a class="nav-link" href="./reclamos.html">Reclamos</a>
                         </li>
             </nav>
         </nav>
     </header>
+    <main>
+        <form action="https://formsubmit.co/prueba921@yopmail.com" method="POST">
+            <h2>Formulario de Contacto</h2>
+            <div class="input-group">
+                <label for="nombreC">NOMBRE COMPLETO:</label>
+                <input type="text" name="nombreC" id="nombreC" placeholder="Nombre Completo">
+
+                <label for="correo">CORREO ELECTRONICO:</label>
+                <input type="email" name="correo" id="correo" placeholder="Correo Electronico">
+
+                <label for="mensaje">MENSAJE:</label>
+                <textarea name="mensaje" id="mensaje" cols="30" rows="10"></textarea>
+
+
+                <input type="submit" id="boton" value="Enviar">
+                <input type="hidden" name="_next" value="http://127.0.0.1:5500/">
+                <input type="hidden" name="_captcha" value="false">
+            </div>
+        </form>
+    </main>
     <script type="text/javascript" src="./logicaForm.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
         integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
@@ -51,4 +71,5 @@
         integrity="sha384-+sLIOodYLS7CIrQpBjl+C7nPvqq+FbNUBDunl/OZv93DB7Ln/533i8e/mZXLi/P+"
         crossorigin="anonymous"></script>
 </body>
+
 </html>
