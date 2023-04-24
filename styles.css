@@ -2,19 +2,28 @@
     margin: 0;
     padding: 0;
     outline: none;
-    font-family: serif;
+    font-family: 'Roboto Serif', 'serif';
 }
 
-body{
-    display: flex;
+body {
     align-items: center;
     justify-content: center;
+    display: flex;
+    flex-direction: column;
     min-height: 100vh;
     background: rgb(180,115,58);
     background: linear-gradient(90deg, rgba(180,115,58,1) 0%, rgba(253,138,29,1) 50%, rgba(252,69,69,1) 100%);
 }
 
+.p2{
+    width: 35%;
+}
+
 .container{
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    display: flex;
     width: 350px;
     background: white;
     border-radius: 7px;
@@ -25,10 +34,11 @@ body{
 .container header {
     font-size: 28px;
     font-weight: 600;
-    margin: 0 0 30px 0;
+    margin: 0 0 5px 0;
 }
 
 .container .form-principal{
+    padding-left: 9%;
     width: 100%;
     overflow: hidden;
 }
@@ -73,6 +83,7 @@ body{
     width: 40%;
     height: 20%;
     margin-top: -30px;
+    margin-right: 20%;
     border: none;
     background-color: rgb(7, 9, 116);
     border-radius: 7px;
@@ -104,7 +115,6 @@ body{
 
 .form-principal form .pagina .campo button{
     width: 100%;
-    height: calc(100% + 5px);
     margin-top: -20px;
     border: none;
     background-color: rgb(7, 9, 116);
@@ -118,7 +128,15 @@ body{
 
 .form-principal form .pagina .campo button:hover{
     background: rgb(255, 102, 0);
+    
 }
+
+
+.form-principal form .pagina .GEN:hover{
+    background: rgb(255, 102, 0);
+
+}
+
 
 .form form .pagina .btns button{
     margin-top: -20px!important;
@@ -151,4 +169,33 @@ form .pagina .btns button.adelante{
 .barraProgreso .paso .check.active{
     display: block;
     color: blue;
+}
+
+
+/*HEADER*/
+.header {
+width: 100%;
+background: rgb(180,115,58);
+background: linear-gradient(90deg, rgba(180,115,58,1) 0%, rgba(253,138,29,1) 50%, rgba(252,69,69,1) 100%);
+}
+
+.collapse {
+display: flex;
+flex-direction: row;
+justify-content: flex-end;
+margin: 7px;
+}
+
+.nav {
+text-decoration: none;
+margin: 10px;
+font-size: 20px;
+color: black;
+}
+
+.immg {
+    
+border-radius: 50px;
+margin: 7px;
+
 }

@@ -24,75 +24,49 @@ margin: 7px;
 
 }
 
-@media (max-width:390px){
-    .navbar-brand {
-        display: none;
-    }
-}
-
 /*BODY Carousel*/
 #bienv {
-position: absolute;
 color: #000000;
 text-align: left;
-left: 50px;
-bottom: 80px;
-font-size: xx-large;
+text-decoration: overline;
+text-decoration: underline 2px;
+margin-top: 20px;
+
+
 }
+
+#emprendimiento {
+font-size: medium;
+font-weight: 500;
+text-align: center;
+margin-right: 5px;
+color: #000000;
+
+}
+
+.carousel {
+text-align: center;
+margin-top: 10px;
+
+}
+
 
 #invit {
 text-align: right;
 font-weight: 500;
-font-size: large;
 }
 
 .sections {
 font-size: x-large;
 font-weight: 500;
 color: white;
-left: 600px;
+
 }
 
 .sections:hover{
 text-decoration: none;
 color: white;
 font-weight: 700;
-}
-
-@media  (min-width: 576px) and (max-width: 767.98px){
-    #bienv{
-        display: none;
-    }
-    #invit{
-        position: absolute;
-        font-weight: 500;
-        color: #000000;
-        bottom: 0;
-        right: 0;
-        font-size: medium;
-    }
-
-    .sections{
-        font-size: large;
-        bottom: 0;
-    }
-}
-
-@media (max-width: 575.98px){
-    #bienv{
-        display: block;
-        bottom: 0;
-        font-size: large;
-    }
-
-    #invit {display: none;}
-
-    .sections{
-        display:block;
-        font-size: medium;
-        align-items: center;
-        top: 50%;
-    }
 }
 
 /*BODY Cards Libros*/
@@ -171,25 +145,17 @@ height: 35px;
 /*BODY (QUIENES SOMOS)*/
 
 #quienessomos {
+height: 100%;
+width: 100%;
 align-items: center;
-text-align: justify;
 display: flex;
 flex-direction: column;
+justify-content: center;
 padding: 0%;
-margin-left: 100px;
-margin-right: 100px;
+margin: 0;
+line-height: 10%;
 }
 
-@media (max-width: 767.98px){
-    #quienessomos{
-    margin-left: 50px;
-    margin-right: 50px;
-    hyphens: auto;
-    word-spacing: -1px;
-    }
-    
-
-}
 .container-cards {
 display: flex;
 flex-wrap: wrap;
@@ -301,7 +267,7 @@ transform: translateY(-25px);
 }
 
 #pres1 .data{
-transform: translateY(30px);
+transform: translateY(25px);
 }
 
 #pres4 h2 {
@@ -331,15 +297,15 @@ height: 100%;
 object-fit: cover;
 }
 
-@media (max-width: 500px) {
+@media (max-width: 576px) {
 .container-cards{
     display: flex;
+    height: max-content;
+    width: 100%;
     flex-direction: column;
     flex-wrap: wrap;
     align-items: center;
-    justify-content: center;
-    padding: 0;
-   }
+}
 }
 
 /* FOOTER*/

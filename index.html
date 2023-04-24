@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="http://code.jquery.com/jquery-3.6.8.min.js"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
         integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
@@ -51,38 +52,41 @@
             <div class="carousel-inner" role="listbox">
               <div class="carousel-item active">
                 <div class="imgg"><img class="d-block img-fluid" src="./Imagenes/Slide1.jpg" alt="First slide"></div>
-                <div class="carousel-caption d-md-block">
-                    <h5 id="bienv">¡BIENVENIDO!</h5>
+                <div class="carousel-caption d-none d-md-block">
+                    <h5 id="bienv">¡Bienvenido!</h5>
+                    <p id="emprendimiento">Somos un emprendimiento de jóvenes amantes de los libros, y buscamos transmitir esa pasión a la mayor cantidad de personas posibles. <br> ¡Es por ello que creamos
+                        esta web! La lectura es una actividad esencial para nuestro desarrollo personal y profesional. A través de ella podemos adquirir nuevos conocimientos,
+                        estimular nuestra imaginación y creatividad, mejorar nuestra capacidad de comunicación y expresión, y mejorar nuestra salud mental y bienestar.</p>
                     <p id="invit">Te invitamos a conocer las secciones <i class="bi bi-forward-fill"></i></p>
                 </div>
               </div>
               <div class="carousel-item">
                 <div class="imgg"><img class="d-block img-fluid" src="./Imagenes/Slide2.jpg" alt="Second slide"></div>
-                <div class="carousel-caption d-md-block">
+                <div class="carousel-caption d-none d-md-block">
                     <a href="#" class="sections">Ficción y Literatura</a> 
                 </div>
               </div>
               <div class="carousel-item">
                 <div class="imgg"><img class="d-block img-fluid" src="./Imagenes/Slide3.jpg" alt="Third slide"></div>
-                <div class="carousel-caption d-md-block">
+                <div class="carousel-caption d-none d-md-block">
                     <a href="#" class="sections">Ciencia y Educación</a> 
                 </div>
               </div>
               <div class="carousel-item">
                 <div class="imgg"><img class="d-block img-fluid" src="./Imagenes/Slide4.jpg" alt="Four slide"></div>
-                <div class="carousel-caption d-md-block">
+                <div class="carousel-caption d-none d-md-block">
                     <a href="#" class="sections">Libros Infantiles</a> 
                 </div>
               </div>
               <div class="carousel-item">
                 <div class="imgg"><img class="d-block img-fluid" src="./Imagenes/Slide5.jpg" alt="Fifth slide"></div>
-                <div class="carousel-caption d-md-block">
+                <div class="carousel-caption d-none d-md-block">
                     <a href="#" class="sections">Salud y Bienestar</a> 
                 </div>
               </div>
               <div class="carousel-item">
                 <div class="imgg"><img class="d-block img-fluid" src="./Imagenes/Slide6.jpg" alt="Sixth slide"></div>
-                <div class="carousel-caption d-md-block">
+                <div class="carousel-caption d-none d-md-block">
                     <a href="#" class="sections">Revistas y Cómics</a> 
                 </div>
               </div>
@@ -236,6 +240,8 @@
 
                     var nombre = $("#nombre").val();
                     var email = $("#email").val();
+                    
+                    alert("Enviaremos las ofertas a " + email)
 
                     $.ajax({
                         url: "https://reqres.in/api/users",
@@ -260,15 +266,28 @@
                     })
 
                 })
+
+
+                botonFin.addEventListener("click",function(e){
+    e.preventDefault();
+    var nombre = document.getElementById("Nombre").value;
+    var email = document.getElementById("email").value
+    if(nombre=="" && email == ""){
+        alert("Es necesario llenar los campos")
+    
+    }
+    else{
+    alert("Recibirá un mail con todas las ofertas!");
+    progressCheck[cont - 1].classList.add("active");
+    /*cont += 1;*/
+}
+})
             </script>
         </section>
 
         <section class="presentacion">
             <div class="title" id="quienessomos">
                 <h3 style="font-size: x-large;">QUIENES SOMOS</h3>
-                <p id="emprendimiento">Somos un emprendimiento de jóvenes amantes de los libros, y buscamos transmitir esa pasión a la mayor cantidad de personas posibles. <br> ¡Es por ello que creamos
-                    esta web! La lectura es una actividad esencial para nuestro desarrollo personal y profesional. A través de ella podemos adquirir nuevos conocimientos,
-                    estimular nuestra imaginación y creatividad, mejorar nuestra capacidad de comunicación y expresión, y mejorar nuestra salud mental y bienestar.</p>
                 <p>¿Querés saber más sobre nosotros?</p>
                 <br>
             </div>

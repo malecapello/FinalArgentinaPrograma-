@@ -6,9 +6,25 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <link rel="stylesheet" href="./estilos.css">
+    <link rel="stylesheet" href="./styles.css">
+    <link rel="stylesheet" href="estilos.css">
     <title>FORMULARIO DE RECLAMO</title>
     <script type="text/javascript" src="jspdf.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="http://code.jquery.com/jquery-3.6.8.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+        integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.4/font/bootstrap-icons.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Serif&display=swap" rel="stylesheet">
+    <title>VirtualBooks</title>
+    <link rel="icon" href="./Imagenes/images.png">
+    <style type="text/css">
+        body {
+            font-family: 'Roboto Serif', 'serif';
+        }
+    </style>
 
 </head>
 
@@ -36,7 +52,7 @@
             </nav>
         </nav>
     </header> 
-    <main>
+    <div class="p2">
     <div class = 'container'>
         <header>SOLICITUD DE RECLAMO</header>
 
@@ -89,7 +105,7 @@
                     <div class="titulo">Informacion Contacto</div>
                     <div class="campo">
                         <div class="label">Correo Electronico: <b class="error" id="error-correo"></b></div>
-                        <input type="text" id="correo" placeholder="Nombre">
+                        <input type="text" id="correo" placeholder="Correo Electronico">
                     </div>
                     <div class="campo">
                         <div class="label">Confirmar Correo:<b class="error" id="error-correoConf"></b></div>
@@ -122,8 +138,8 @@
                     <input  class="GEN" type="submit" value="GENERAR PDF">
                 </div>
             </form>
-        </main>
         </div>
+    </div>
     </div>
     <div id="respuesta"></div>
     <script src="mov.js"></script>
