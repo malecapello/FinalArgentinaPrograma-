@@ -85,7 +85,7 @@ body {
     margin-top: -30px;
     margin-right: 20%;
     border: none;
-    background-color: rgb(7, 9, 116);
+    background-color: green;
     border-radius: 7px;
     color: white;
     font-size: 18px;
@@ -117,7 +117,7 @@ body {
     width: 100%;
     margin-top: -20px;
     border: none;
-    background-color: rgb(7, 9, 116);
+    background-color: green;
     border-radius: 7px;
     color: white;
     font-size: 18px;
@@ -168,7 +168,7 @@ form .pagina .btns button.adelante{
 
 .barraProgreso .paso .check.active{
     display: block;
-    color: blue;
+    color: green;
 }
 
 
