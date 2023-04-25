@@ -24,43 +24,34 @@ margin: 7px;
 
 }
 
+@media (max-width:390px){
+    .navbar-brand {
+        display: none;
+    }
+}
+
 /*BODY Carousel*/
 #bienv {
+position: absolute;
 color: #000000;
 text-align: left;
-text-decoration: overline;
-text-decoration: underline 2px;
-margin-top: 20px;
-
-
+left: 40px;
+bottom: 80px;
+font-size: xx-large;
 }
-
-#emprendimiento {
-font-size: medium;
-font-weight: 500;
-text-align: center;
-margin-right: 5px;
-color: #000000;
-
-}
-
-.carousel {
-text-align: center;
-margin-top: 10px;
-
-}
-
 
 #invit {
 text-align: right;
 font-weight: 500;
+font-size: x-large;
+text-shadow: 2px 2px #2e2a2a31;
 }
 
 .sections {
 font-size: x-large;
 font-weight: 500;
 color: white;
-
+left: 600px;
 }
 
 .sections:hover{
@@ -69,17 +60,57 @@ color: white;
 font-weight: 700;
 }
 
+@media  (min-width: 768px) and (max-width: 992px){
+    #bienv{
+        display: none;
+    }
+    #invit{
+        position: absolute;
+        font-weight: 500;
+        color: #000000;
+        bottom: 0;
+        right: 0;
+        font-size: x-large;
+        text-shadow: none;
+    }
+
+    .sections{
+        font-size: large;
+        bottom: 0;
+    }
+}
+
+@media (max-width: 768px){
+    #bienv{
+        display: block;
+        bottom: 0;
+        font-size: x-large;
+    }
+
+    #invit {display: none;}
+
+    .sections{
+        display:block;
+        font-size: medium;
+        align-items: center;
+        top: 50%;
+    }
+}
+
 /*BODY Cards Libros*/
 .conteiner {
 display: flex;
 flex-wrap: wrap;
 justify-content: space-around;
+padding-left: 100px;
+padding-right: 100px;
 }
 
 .card {
 margin: 20px 10px;
 display: flex;
 align-items: center;
+box-shadow: 0 5px 5px rgba(4, 77, 32, 0.219);
 }
 .card-img-top {
 height: 18rem;
@@ -90,7 +121,7 @@ width: 14rem;
 display: flex;
 flex-direction: column;
 align-items: center;
-height: 16rem;
+min-height: 16rem;
 justify-content: space-between;
 }
 
@@ -108,31 +139,50 @@ line-height: 1.2rem;
 width: 8rem;
 }
 
-
 .subt {
 font-size: 27px;
 text-align: center;
-margin: 20px;
+margin: 50px;
 }
 
+#row2, #row3 {
+    margin-top: 15px;
+    margin-bottom: 20px;
+}
+
+/*Form Descuentos*/
 .form-dcto {
-margin: 50px 20px;
+margin: 40px 20px;
 border: solid 1px black;
 padding: 50px 5px 30px 10px;
 background: rgb(180,115,58);
 background: linear-gradient(90deg, rgba(180,115,58,1) 0%, rgba(253,138,29,1) 50%, rgba(252,69,69,1) 100%);
-}
-
-.form-container {
 display: flex;
+flex-direction: column;
+flex-wrap: wrap;
 justify-content: space-around;
+align-items: center;
 }
 
 .sform {
-margin: 0 10px 10px 30px;
+display: inline-flex;
 text-align: center;
 color: #000000;
 font-weight: 500;
+margin-bottom: 20px;
+padding: 0;
+}
+
+
+@media (max-width: 767.98px){
+    .sform {
+        font-size: x-large;
+    }
+    .form-row {
+        display: inline-block;
+        flex-direction: column;
+        justify-content: center;
+    }
 }
 
 .btn-enviar {
@@ -141,19 +191,30 @@ background-color: green;
 height: 35px;
 }
 
-
 /*BODY (QUIENES SOMOS)*/
 
 #quienessomos {
-height: 100%;
-width: 100%;
 align-items: center;
+text-align: justify;
 display: flex;
 flex-direction: column;
-justify-content: center;
 padding: 0%;
-margin: 0;
-line-height: 10%;
+margin: 50px 200px 0px 200px;
+}
+
+#masdatos {
+    font-size: large;
+    font-variant: small-caps;
+    margin-top: 15px;
+}
+
+@media (max-width: 767.98px){
+    #quienessomos{
+    margin-left: 50px;
+    margin-right: 50px;
+    hyphens: auto;
+    word-spacing: -1px;
+    }
 }
 
 .container-cards {
@@ -216,7 +277,7 @@ font-weight: 600;
 color: #555;
 text-align: center;
 align-items: end;
-margin-bottom: 25px;
+margin-bottom: 15px;
 }
 
 .card2 .content .details h2 span{
@@ -249,9 +310,9 @@ text-align: right;
 font-weight: 700;
 }
 
-/* Cambios en presentaciones*/
-#pres2 h2, #pres1 h2{
-transform: translateY(25px);
+/* Adaptaciones en presentaciones*/
+#pres2 h2{
+transform: translateY(15px);
 }
 
 #pres2 .data{
@@ -267,11 +328,18 @@ transform: translateY(-25px);
 }
 
 #pres1 .data{
-transform: translateY(25px);
+transform: translateY(10px);
 }
 
 #pres4 h2 {
 transform: translateY(-14px);
+}
+
+
+#pres1 .data a{
+    position: absolute;
+    right: 0;
+    bottom: 8px;
 }
 
 
@@ -297,15 +365,15 @@ height: 100%;
 object-fit: cover;
 }
 
-@media (max-width: 576px) {
+@media (max-width: 500px) {
 .container-cards{
     display: flex;
-    height: max-content;
-    width: 100%;
     flex-direction: column;
     flex-wrap: wrap;
     align-items: center;
-}
+    justify-content: center;
+    padding: 0;
+    }
 }
 
 /* FOOTER*/
@@ -315,6 +383,7 @@ margin: 0;
 background-color: #fff4ea;
 background-size: cover;
 }
+
 #Columna1, #Columna2 {
 display: grid;
 padding: 40px;
